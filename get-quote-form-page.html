@@ -81,12 +81,12 @@
               class="get-quote-form-page-desktop-menu"
             >
               <nav class="get-quote-form-page-links1">
-                <button class="get-quote-form-page-button1 button" id="buttonclick">
+                <button class="get-quote-form-page-button1 button" id="cta_1" onclick="updatebuttonclick(this.id)">
                   <a href="our-offer-page.html" class="home-navlink2">
                     Our offers
                   </a>
                 </button>
-                <button class="get-quote-form-page-button2 button" id="buttonclick">
+                <button class="get-quote-form-page-button2 button" id="cta_2" onclick="updatebuttonclick(this.id)">
                   <a href="get-quote-form-page.html" class="home-navlink3">
                     Get a fast quote
                   </a>
@@ -222,7 +222,7 @@
                       </span>
                     </div>
                   </div>
-				  <iframe name="hidden_iframe" style="display:none;"></iframe>	
+				  <iframe name="hidden_iframe" style="display:none;" id="form_getQuote"></iframe>	
                   <form class="thq-card" id="getQuoteForm" action="https://script.google.com/macros/s/AKfycbzgEhkIjFFGRgs2Gi3Nr0GHQPlhAPA0E7dFyf5Ckq6rrLdNtewlR8-aHzPAMNKgWstT/exec" method="POST" target="hidden_iframe">
         
 					  <!--<script>
@@ -314,6 +314,7 @@
                     <button
                       type="submit"
                       class="contact-form3-button thq-button-filled"
+					  id="cta_3" onclick="updatebuttonclick(this.id)"
                     >
                       <span class="thq-body-small">
                         <fragment class="get-quote-form-page-fragment11">
@@ -335,6 +336,7 @@
 				
 				  iframe.onload = function() {
 				    window.location.href = 'https://remarketabletemplateaepdinikatest.netlify.app/thank-you-page.html';
+					updateFormSubmissionEvent(iframe.id);
 				  };
 				</script>
                 </div>
