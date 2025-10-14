@@ -222,9 +222,17 @@
                       </span>
                     </div>
                   </div>
-                  <form class="thq-card" id="getQuoteForm" action="https://script.google.com/macros/s/AKfycbzyYQHoO0vEtHYxT5mUgdDWp1NaUNCJF7V0X5lIfY7xTI4k3WcSENLT--VUDSvqAbve/exec" method="POST">
+				  <iframe name="hidden_iframe" style="display:none;"></iframe>	
+                  <form class="thq-card" id="getQuoteForm" action="https://script.google.com/macros/s/AKfycbzgEhkIjFFGRgs2Gi3Nr0GHQPlhAPA0E7dFyf5Ckq6rrLdNtewlR8-aHzPAMNKgWstT/exec" method="POST" target="hidden_iframe">
         
-					  
+					  <script>
+					    // Listen for hidden iframe load event
+					    const iframe = document.querySelector('iframe[name="hidden_iframe"]');
+					    iframe.onload = function() {
+					      // Redirect to your custom thank-you page after submission
+					      window.location.href = 'https://remarketabletemplateaepdinikatest.netlify.app/thank-you-page.html';
+					    };
+					  </script>
 					  
 					  <!--<script>
                             const scriptURL = "https://script.google.com/macros/s/AKfycbwTYCDvEFovxdX2HCXoWdEn8LzuJjvzh9JY01od2Vdt5sbCEooKMqfFZSLv5eYvVu9b/exec";
