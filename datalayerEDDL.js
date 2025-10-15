@@ -46,15 +46,21 @@ function updateFormSubmissionEvent(id){
             eventName: "email submit - get your quote",
             eventAction: "email submitted",
             eventType: "email"
-          }
+          },
+          event: "form_complete",
+          eventInfo: {
+          eventName: "form completed - get your quote",
+          eventAction: "form completed",
+          eventType: "form"
+         }
     });
-    window.EDDLdataLayer.push({
+    /*window.EDDLdataLayer.push({
           event: "form_complete",
           eventInfo: {
             eventName: "form completed - get your quote",
             eventAction: "form completed",
             eventType: "form"
           }
-        });
+        });*/
 }
 
