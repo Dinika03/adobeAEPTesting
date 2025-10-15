@@ -332,11 +332,14 @@
 				
 				  form.addEventListener('submit', () => {
 				    loadingMessage.style.display = 'block'; // show loading immediately
+					
 				  });
 				
 				  iframe.onload = function() {
 					updateFormSubmissionEvent(iframe.id);
-				    window.location.href = 'https://remarketabletemplateaepdinikatest.netlify.app/thank-you-page.html';
+					setTimeout(function() {
+					    window.location.href = 'https://remarketabletemplateaepdinikatest.netlify.app/thank-you-page.html';
+					  }, 3000);
 				  };
 				</script>
                 </div>
